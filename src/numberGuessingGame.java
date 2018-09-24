@@ -16,6 +16,7 @@ public class numberGuessingGame {
 
 
         while (playAgain==false) {
+
             wonGame = false;
             numberOfGuesses = 10;
 
@@ -23,7 +24,6 @@ public class numberGuessingGame {
             systemNumber = (int) (Math.random() * 100);
 
             System.out.println("System has given you a number, between 1-100");
-            System.out.println(systemNumber);
 
 
             while (!wonGame && numberOfGuesses > 0) {
@@ -34,7 +34,6 @@ public class numberGuessingGame {
                 } else if (playerGuess < systemNumber) {
                     System.out.println("That's too low go higher");
                 } else if (playerGuess == systemNumber) {
-                    System.out.println("Good job you chose the correct number!");
                     wonGame = true;
                 }
 
@@ -46,7 +45,7 @@ public class numberGuessingGame {
                 System.out.println("You had " + numberOfGuesses + " guess/es left");
             }
 
-            if (wonGame == false) {
+            else if (wonGame == false) {
                 System.out.println("How could you not even guess a number?");
                 System.out.println("Your number was " + systemNumber);
             }
